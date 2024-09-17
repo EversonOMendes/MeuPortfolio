@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainComponent } from './components/main/main.component';
 import { MatStepperModule } from '@angular/material/stepper';
+import { ToolsPortfolioComponent } from './components/tools-portfolio/tools-portfolio.component';
+import { MainPortfolioComponent } from './components/main-portfolio/main-portfolio.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    ToolsPortfolioComponent,
+    MainPortfolioComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

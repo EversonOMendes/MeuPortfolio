@@ -1,76 +1,19 @@
-<body>
-
-  <div class="toolbar">
-    <div class="photoCircle">
-      <img src="assets/photoPerfil.jpg" alt="">
-    </div>
-
-    <div class="contact">
-      <span class="title">Informações</span>
-      <mat-divider></mat-divider>
-      <div class="content">
-        <div class="tel">
-          <mat-icon>call</mat-icon>
-          <span>+55 43 9 8445-8966</span>
+<header class="menu">
+    <div class="logo">
+        <div class="photoCircle">
+            <img src="assets/photoPerfil.jpg" alt="Foto do perfil de Everson Mendes">
         </div>
-        <br>
-        <div class="email">
-          <mat-icon>outgoing_mail</mat-icon>
-          <span>eversonmendes301@gmail.com</span>
-        </div>
-        <br>
-        <div class="address">
-          <mat-icon>location_on</mat-icon>
-          <span>Porto Alegre - RS</span>
-        </div>
-        <br>
-        <div class="linkedin">
-          <mat-icon>link</mat-icon>
-          <span>
-            <a href="https://www.linkedin.com/in/eversonmendes301">eversonmendes301</a>
-          </span>
-        </div>
-      </div>
+        <span>Everson Mendes</span>
     </div>
-
-    <div class="education">
-      <span class="title">Formação academica</span>
-      <mat-divider></mat-divider>
-      <div class="content">
-        <span>Univesidade Estácio</span>
-        <small>2023 - 2025</small>
-        <small> - Análise e desenvolvimento de sistemas.</small>
-      </div>
-      <br>
-      <div class="content">
-        <span>Senac - RS</span>
-        <small>2014 - 2016</small>
-        <small> - Técnico em informática.</small>
-      </div>
+    <div class="options">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Projects</a>
     </div>
-
-    <div class="competencies">
-      <span class="title">Competências</span>
-      <mat-divider></mat-divider>
-      <div class="content">
-        <span> - Project Management</span>
-      </div>
-      <div class="content">
-        <span> - Effective Communication</span>
-      </div>
+    <div class="links">
+        <img src="../assets/github.png" alt="github" width="35px">
+        <img src="../assets/linkedin.png" alt="linkedin" width="35px">
     </div>
+</header>
 
-  </div>
-
-  <button mat-button color="basic" (click)="toggleMenu()" *ngIf="this.isMenuOpen">
-    <mat-icon>{{ isMenuOpen ? 'close' : 'menu' }}</mat-icon>
-  </button>
-  <main>
-    <app-main>
-    </app-main>
-  </main>
-
-</body>
-<footer>
-  Desenvolvido por @Everson Oliveira Mendes
-</footer>
+<app-tools-portfolio></app-tools-portfolio>

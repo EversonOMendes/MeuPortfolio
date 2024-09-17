@@ -1,27 +1,19 @@
-body {
-    flex: 1 1;    
-    display: flex;
-    flex-direction: row;
-}
-
-/* ================================================================== */
-/* ===================== MENU ======================================= */
-/* ================================================================== */
-.toolbar {
-    display: flex;
-    width: 20%;
+.menu {
+    height: 80px;
     background-color: #163853;
-    flex-direction: column;
-    padding: 1%;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: space-between;
 }
 
 .photoCircle {
-    width: 13vw;
-    height: 13vw;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
-    border: 0.5vw solid rgb(255, 255, 255);
+    border: 0.1vw solid rgb(0, 0, 0);
     cursor: pointer;
-    margin-top: 20px;
 }
 
 .photoCircle img {
@@ -32,95 +24,42 @@ body {
     object-position: top;
 }
 
-/* ====================== */
-.contact {
-    width: 100%;
-    margin-top: 1vw;
-}
-
-.tel {
+.logo {
+    width: 20%;
+    min-width: 310px;
     display: flex;
+    align-items: center;
 }
 
-.tel span {
-    font-size: 1vw;
+.logo span {
+    margin-left: 15px;
+    font-size: 30px;
+    font-weight: 500;
+    color: aliceblue;
 }
 
-.email {
+.options {
+    width: 80%;
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
-.email span {
-    font-size: 1vw;
-}
-
-.address {
-    display: flex;
-}
-
-.address span {
-    font-size: 1vw;
-}
-
-.linkedin {
-    display: flex;
-}
-
-.linkedin a {
-    font-size: 1vw;
+.options a {
+    text-decoration: none;
     color: white;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 20px;
 }
 
-.linkedin a:hover {
-    font-size: 1vw;
-    color: rgb(255, 0, 0);
-}
-
-/* ====================== */
-.education {
-    width: 100%;
-    margin-top: 2vw;
-}
-
-.education small {
-    color: white;
-}
-
-/* ====================== */
-.competencies {
-    width: 100%;
-    margin-top: 2vw;
-}
-
-/* ================================================================== */
-/* ===================== MAIN ======================================= */
-/* ================================================================== */
-
-main {
-    min-width: 70%;
-    max-width: 100%;
-    margin-bottom: 10vw;
-}
-
-
-/* ================================================================== */
-/* ===================== footer ======================================= */
-/* ================================================================== */
-
-footer {
-    width: 100%;
-    color: white;
-    background-color: #163853;
+.links {
+    width: 10%;
+    min-width: 165px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
-@media screen and (max-width: 767px) {
-    .toolbar {
-        display: flex;
-        width: 40%;
-        background-color: #163853;
-        flex-direction: column;
-        padding: 1%;
-    }
+.links img {
+    padding: 20px;
 }
