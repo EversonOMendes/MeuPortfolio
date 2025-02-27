@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Diretório do projeto Angular
+PROJECT_DIR="$(pwd)"
+
+# Nome do diretório de saída do build
+docs_folder="docs"
+
+# Criar o build do projeto
+ng build --base-href "/" --output-path $docs_folder
+
+# Verifica se a build foi bem-sucedida
+echo "Build concluída! Os arquivos foram gerados na pasta $docs_folder."
+
+# Adiciona, commit e envia para o GitHub Pages
+git add $docs_folder
+git commit -m "Atualização do build para GitHub Pages"
+git push origin main
