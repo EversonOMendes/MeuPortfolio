@@ -1,11 +1,3 @@
-#!/bin/bash
-
-# Diretório do projeto Angular
-PROJECT_DIR="$(pwd)"
-
-# Nome do diretório de saída do build
-docs_folder="docs"
-
 # Criar o build do projeto
 ng build --base-href "/dist" --output-path $docs_folder
 
