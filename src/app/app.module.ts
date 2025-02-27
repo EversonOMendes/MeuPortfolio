@@ -8,6 +8,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatButtonModule } from '@angular/material/button';
+
 import { ToolsPortfolioComponent } from './components/tools-portfolio/tools-portfolio.component';
 import { MainPortfolioComponent } from './components/main-portfolio/main-portfolio.component';
 import { HomeComponent } from './components/home/home.component';
@@ -17,7 +19,7 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     ToolsPortfolioComponent,
     MainPortfolioComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,9 +27,10 @@ import { HomeComponent } from './components/home/home.component';
     MatDividerModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatStepperModule
+    MatStepperModule,
+    MatButtonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

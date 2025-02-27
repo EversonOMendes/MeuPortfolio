@@ -1,19 +1,21 @@
 <header class="menu">
-    <div class="logo">
-        <div class="photoCircle">
-            <img src="assets/photoPerfil.jpg" alt="Foto do perfil de Everson Mendes">
-        </div>
-        <span>Everson Mendes</span>
+  <!-- <div class="logo">
+    <div class="photoCircle">
+      <img src="assets/photoPerfil.jpg" alt="Foto do perfil de Everson Mendes">
     </div>
-    <div class="options">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Projects</a>
-    </div>
-    <div class="links">
-        <img src="../assets/github.png" alt="github" width="35px">
-        <img src="../assets/linkedin.png" alt="linkedin" width="35px">
-    </div>
+    <span>Everson Mendes</span>
+  </div> -->
+  <div class="options">
+    <a mat-button routerLink="/home" routerLinkActive="active"><mat-icon>home</mat-icon>Inicio</a>
+    <span class="divisor">|</span>
+    <a mat-button routerLink="/about" routerLinkActive="active"><mat-icon>info</mat-icon>Sobre</a>
+    <span class="divisor">|</span>
+    <a mat-button routerLink="/projets" routerLinkActive="active"><mat-icon>folder_open</mat-icon> Meus Projetos</a>
+  </div>
+  <!-- <div class="links">
+    <img src="../assets/github.png" alt="github" width="35px">
+    <img src="../assets/linkedin.png" alt="linkedin" width="35px">
+  </div> -->
 </header>
 
-<app-tools-portfolio></app-tools-portfolio>
+<router-outlet></router-outlet>
