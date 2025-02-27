@@ -6,11 +6,17 @@
     <span>Everson Mendes</span>
   </div> -->
   <div class="options">
-    <a mat-button routerLink="/home" routerLinkActive="active"><mat-icon>home</mat-icon>Inicio</a>
+    <button class="button" mat-button routerLink="/home" routerLinkActive="active">
+      <mat-icon>home</mat-icon>Inicio
+    </button>
     <span class="divisor">|</span>
-    <a mat-button routerLink="/about" routerLinkActive="active"><mat-icon>info</mat-icon>Sobre</a>
+    <button class="button" mat-button routerLink="/about" routerLinkActive="active">
+      <mat-icon>info</mat-icon>Sobre
+    </button>
     <span class="divisor">|</span>
-    <a mat-button routerLink="/projets" routerLinkActive="active"><mat-icon>folder_open</mat-icon> Meus Projetos</a>
+    <button class="button" mat-button routerLink="/projets" routerLinkActive="active" [disabled]="true">
+      <mat-icon>folder_open</mat-icon> Meus Projetos
+    </button>
   </div>
   <!-- <div class="links">
     <img src="../assets/github.png" alt="github" width="35px">

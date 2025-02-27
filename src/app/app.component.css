@@ -11,10 +11,18 @@ header {
   /* justify-content: center; */
 }
 
-.options a {
+.options button {
   color: aliceblue;
   padding: 22px;
 }
+
+.options button:disabled {
+  color: #a0b9d6;
+  background-color: #163853;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 
 .divisor {
   padding: 10px;
@@ -42,8 +50,8 @@ header {
 }
 
 .active {
-	background-color: #031d33;
-  border: 1px solid rgb(47, 48, 73);
+	background-color: #022748b5;
+  /* border: 1px solid rgb(0, 3, 78); */
 }
 
 .router {
