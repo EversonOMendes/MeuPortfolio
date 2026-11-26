@@ -1,0 +1,62 @@
+<span class="sr-only">Carregando…</span>
+
+<div class="container sk">
+  <app-skeleton width="160px" height="14px" />
+  <app-skeleton class="sk__title" width="min(520px, 80%)" height="44px" radius="12px" />
+
+  @switch (variant()) {
+    @case ('split') {
+      <div class="sk__split">
+        <div class="sk__lines">
+          @for (i of three; track i) {
+            <app-skeleton shape="text" />
+            <app-skeleton shape="text" width="92%" />
+            <app-skeleton shape="text" width="70%" />
+          }
+        </div>
+        <app-skeleton height="260px" radius="var(--radius)" />
+      </div>
+    }
+    @case ('cards') {
+      <app-skeleton height="150px" radius="var(--radius)" />
+      <div class="sk__cards">
+        @for (i of three; track i) {
+          <div class="sk__card">
+            <div class="sk__row">
+              <app-skeleton shape="circle" width="56px" />
+              <div class="sk__grow">
+                <app-skeleton shape="text" width="60%" />
+                <app-skeleton shape="text" width="85%" />
+              </div>
+            </div>
+            <app-skeleton shape="text" />
+            <app-skeleton shape="text" width="80%" />
+          </div>
+        }
+      </div>
+    }
+    @case ('timeline') {
+      <div class="sk__timeline">
+        @for (i of three; track i) {
+          <div class="sk__row">
+            <app-skeleton shape="circle" width="14px" />
+            <div class="sk__grow sk__card">
+              <app-skeleton shape="text" width="45%" />
+              <app-skeleton shape="text" width="25%" />
+              <app-skeleton shape="text" />
+            </div>
+          </div>
+        }
+      </div>
+    }
+    @case ('cta') {
+      <div class="sk__cta">
+        <app-skeleton shape="text" width="min(420px, 90%)" />
+        <div class="sk__row sk__row--center">
+          <app-skeleton width="180px" height="56px" radius="999px" />
+          <app-skeleton width="140px" height="56px" radius="999px" />
+        </div>
+      </div>
+    }
+  }
+</div>

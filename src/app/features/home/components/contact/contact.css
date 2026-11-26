@@ -1,0 +1,52 @@
+:host {
+  display: block;
+  padding: var(--section-pad) 0;
+  background: radial-gradient(
+    ellipse 50% 70% at 50% 100%,
+    rgba(242, 140, 30, 0.14),
+    transparent 70%
+  );
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact app-section-header {
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contact__lead {
+  max-width: 560px;
+  color: var(--text-2);
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.contact__phone {
+  margin-top: 22px;
+  color: var(--text-3);
+  font-size: 15px;
+}
+
+.contact__phone a {
+  color: var(--text-2);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.contact__phone a:hover {
+  color: var(--accent);
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 36px;
+}

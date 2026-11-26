@@ -7,7 +7,7 @@ PROJECT_DIR="$(pwd)"
 docs_folder="docs"
 
 # Criar o build do projeto
-ng build --base-href "/dist" --output-path $docs_folder
+npm run build:pages
 
 # Verifica se a build foi bem-sucedida
 echo "Build concluída! Os arquivos foram gerados na pasta $docs_folder."

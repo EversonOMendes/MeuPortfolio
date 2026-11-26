@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 76px;
+  color: var(--text-2);
+  font-size: 15px;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+:host(:hover) {
+  transform: translateY(-3px);
+  color: var(--text);
+}
+
+i {
+  font-size: 46px;
+  line-height: 1;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.5));
+}
+
+/* Ícones monocromáticos ficam legíveis no fundo escuro */
+i.devicon-linux-plain {
+  color: #f4f4f5;
+}

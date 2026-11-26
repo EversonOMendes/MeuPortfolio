@@ -1,0 +1,39 @@
+<!-- Acima da dobra: renderização imediata -->
+<app-hero id="inicio" />
+<app-highlights />
+
+<!--
+  Abaixo da dobra: chunks separados. Carregam quando entram na viewport
+  ou assim que o navegador fica ocioso — o que vier primeiro.
+-->
+<section id="sobre" class="anchor" aria-label="Sobre">
+  @defer (on viewport; on idle) {
+    <app-about />
+  } @placeholder (minimum 400ms) {
+    <app-section-skeleton variant="split" />
+  }
+</section>
+
+<section id="projetos" class="anchor" aria-label="Projetos">
+  @defer (on viewport; on idle) {
+    <app-projects />
+  } @placeholder (minimum 400ms) {
+    <app-section-skeleton variant="cards" />
+  }
+</section>
+
+<section id="experiencia" class="anchor" aria-label="Experiência">
+  @defer (on viewport; on idle) {
+    <app-experience />
+  } @placeholder (minimum 400ms) {
+    <app-section-skeleton variant="timeline" />
+  }
+</section>
+
+<section id="contato" class="anchor" aria-label="Contato">
+  @defer (on viewport; on idle) {
+    <app-contact />
+  } @placeholder (minimum 400ms) {
+    <app-section-skeleton variant="cta" />
+  }
+</section>

@@ -1,0 +1,48 @@
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__visual" aria-hidden="true">
+    <span class="hero__stripe hero__stripe--1"></span>
+    <span class="hero__stripe hero__stripe--2"></span>
+
+    <div class="hero__photo">
+      @if (!photoLoaded()) {
+        <app-skeleton class="hero__photo-sk" radius="0" height="100%" />
+      }
+      <img
+        ngSrc="assets/photo-perfil.webp"
+        alt=""
+        fill
+        priority
+        sizes="(max-width: 900px) 100vw, 45vw"
+        [class.is-loaded]="photoLoaded()"
+        (load)="photoLoaded.set(true)"
+        (error)="photoLoaded.set(true)"
+      />
+    </div>
+  </div>
+
+  <div class="container hero__content">
+    <app-section-header eyebrow="Desenvolvedor de Software" [compact]="true" />
+
+    <h1 id="hero-title" class="hero__title">
+      <span class="hero__title-light">Transformando ideias em</span>
+      <span class="hero__title-bold">soluções reais.</span>
+    </h1>
+
+    <p class="hero__lead">
+      Desenvolvedor Full Stack, apaixonado por tecnologia, com foco em inovação, performance e
+      resultados.
+    </p>
+
+    <div class="hero__actions">
+      <a appButton appScrollTo="projetos">
+        <app-icon name="rocket" />
+        Ver Projetos
+        <app-icon name="arrow-right" />
+      </a>
+      <a appButton variant="outline" appScrollTo="contato">
+        <app-icon name="mail" />
+        Entrar em Contato
+      </a>
+    </div>
+  </div>
+</section>

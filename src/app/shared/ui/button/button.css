@@ -1,0 +1,72 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 60px;
+  padding: 0 34px;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+:host(.btn--sm) {
+  height: 44px;
+  padding: 0 22px;
+  font-size: 15px;
+}
+
+:host(.btn--primary) {
+  color: #121212;
+  font-weight: 600;
+  background: linear-gradient(180deg, var(--accent-2), var(--accent) 55%, var(--accent-deep));
+  box-shadow: 0 10px 30px -10px rgba(242, 140, 30, 0.6);
+}
+:host(.btn--primary:hover) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px -10px rgba(242, 140, 30, 0.75);
+}
+
+:host(.btn--outline) {
+  color: var(--text);
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+:host(.btn--outline:hover) {
+  border-color: var(--accent);
+  background: rgba(242, 140, 30, 0.08);
+}
+
+:host(.btn--ghost) {
+  color: var(--text-2);
+  background: transparent;
+}
+:host(.btn--ghost:hover) {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+:host(:disabled) {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 480px) {
+  :host(:not(.btn--sm)) {
+    height: 54px;
+    padding: 0 26px;
+    font-size: 16px;
+  }
+}

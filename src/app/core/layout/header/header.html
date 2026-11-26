@@ -1,0 +1,63 @@
+<header class="header" [class.is-scrolled]="scrolled() || menuOpen()">
+  <div class="header__inner">
+    <a class="brand" appScrollTo="inicio" aria-label="Everson Mendes — voltar ao início">
+      <svg class="brand__mark" viewBox="0 0 88 40" aria-hidden="true">
+        <defs>
+          <linearGradient id="em-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffb347" />
+            <stop offset="1" stop-color="#e4740f" />
+          </linearGradient>
+        </defs>
+        <path fill="url(#em-grad)" d="M0 0h34v8H9v8h22v8H9v8h25v8H0z" />
+        <path fill="#fff" d="M40 40V0h9l13 18L75 0h9v40h-9V15L62 33 49 15v25z" />
+      </svg>
+      <span class="brand__divider" aria-hidden="true"></span>
+      <span class="brand__text">
+        <strong>Everson Mendes</strong>
+        <small>Senior Software Developer</small>
+      </span>
+    </a>
+
+    <nav
+      id="main-nav"
+      class="nav"
+      [class.is-open]="menuOpen()"
+      aria-label="Navegação principal"
+      (click)="menuOpen.set(false)"
+    >
+      @for (item of nav; track item.id) {
+        <a
+          class="nav__link"
+          [appScrollTo]="item.id"
+          [class.is-active]="active() === item.id"
+          [attr.aria-current]="active() === item.id ? 'location' : null"
+          >{{ item.label }}</a
+        >
+      }
+      <a
+        class="nav__connect nav__connect--mobile"
+        [href]="links.linkedin"
+        target="_blank"
+        rel="noopener"
+      >
+        <app-icon name="linkedin" [size]="18" /> Conecte-se
+      </a>
+    </nav>
+
+    <a class="nav__connect" [href]="links.linkedin" target="_blank" rel="noopener">
+      <app-icon name="linkedin" [size]="18" /> Conecte-se
+    </a>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      [class.is-open]="menuOpen()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="main-nav"
+      [attr.aria-label]="menuOpen() ? 'Fechar menu' : 'Abrir menu'"
+      (click)="toggleMenu()"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

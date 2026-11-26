@@ -1,0 +1,24 @@
+@let p = project();
+<article class="pcard">
+  <header class="pcard__head">
+    <app-logo-tile [src]="p.logo" [size]="64" />
+    <div>
+      <h3 class="pcard__name">{{ p.name }}</h3>
+      <span class="pcard__tagline">{{ p.tagline }}</span>
+    </div>
+  </header>
+
+  <p class="pcard__desc">{{ p.description }}</p>
+
+  <ul class="pcard__tags" aria-label="Principais recursos">
+    @for (feature of p.features.slice(0, 3); track feature) {
+      <li>{{ feature }}</li>
+    }
+  </ul>
+
+  <!-- Botão "esticado": o card inteiro é clicável, mantendo um único alvo acessível. -->
+  <button type="button" class="pcard__more" (click)="details.emit(p)">
+    Ver detalhes <span class="sr-only">do {{ p.name }}</span>
+    <app-icon name="arrow-right" [size]="16" />
+  </button>
+</article>

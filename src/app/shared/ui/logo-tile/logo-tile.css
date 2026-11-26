@@ -1,0 +1,33 @@
+:host {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: var(--tile);
+  height: var(--tile);
+  border-radius: 28%;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.tile__sk {
+  position: absolute;
+  inset: 0;
+}
+
+img {
+  width: 86%;
+  height: 86%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+img.is-loaded {
+  opacity: 1;
+}

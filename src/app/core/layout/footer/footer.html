@@ -1,0 +1,19 @@
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>&copy; {{ year }} Everson Mendes. Todos os direitos reservados.</span>
+    <div class="footer__links">
+      <a [href]="links.whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <app-icon name="whatsapp" [size]="18" />
+      </a>
+      <a [href]="links.linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <app-icon name="linkedin" [size]="18" />
+      </a>
+      <a [href]="links.github" target="_blank" rel="noopener" aria-label="GitHub">
+        <app-icon name="github" [size]="18" />
+      </a>
+      <a class="footer__top" appScrollTo="inicio">
+        Voltar ao topo <app-icon name="arrow-up" [size]="16" />
+      </a>
+    </div>
+  </div>
+</footer>

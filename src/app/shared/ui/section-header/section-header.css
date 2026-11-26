@@ -1,0 +1,42 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 44px;
+}
+
+:host(.compact) {
+  margin-bottom: 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.eyebrow::before {
+  content: '/';
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.eyebrow--accent {
+  color: var(--accent);
+}
+
+@media (max-width: 480px) {
+  .eyebrow {
+    gap: 10px;
+    font-size: 12.5px;
+    letter-spacing: 0.22em;
+  }
+}

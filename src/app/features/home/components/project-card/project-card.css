@@ -1,0 +1,91 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.pcard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  height: 100%;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.pcard:hover,
+.pcard:focus-within {
+  border-color: rgba(242, 140, 30, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px -24px rgba(242, 140, 30, 0.35);
+}
+
+.pcard__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pcard__name {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.pcard__tagline {
+  color: var(--text-2);
+  font-size: 14.5px;
+}
+
+.pcard__desc {
+  flex: 1;
+  color: var(--text-2);
+  line-height: 1.65;
+}
+
+.pcard__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pcard__tags li {
+  padding: 5px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--text-2);
+  font-size: 13px;
+}
+
+.pcard__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Estica a área clicável do botão para o card inteiro */
+.pcard__more::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.pcard__more:focus-visible {
+  outline: none;
+}
+.pcard:has(.pcard__more:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}

@@ -1,0 +1,48 @@
+<div class="container about">
+  <div class="about__text">
+    <app-section-header eyebrow="Sobre">
+      <h2>Código limpo, <span class="hl">entrega de verdade.</span></h2>
+    </app-section-header>
+
+    <p>
+      Sou desenvolvedor full stack sênior na InterOp, em Porto Alegre (RS), onde lidero tecnicamente
+      projetos desafiadores e colaboro com o time em um ambiente híbrido. Também sou fundador da
+      <strong>Msul Sistemas</strong> (Mendes Sul Sistemas), onde desenvolvo o SmartChat, o SmartERP
+      e o SmartShop.
+    </p>
+    <p>
+      Minha jornada começou no curso técnico em informática do Senac-RS, desenvolvendo projetos em
+      Java e PHP. Entrei na InterOp como analista de suporte, criando ferramentas internas e
+      mantendo sistemas, e fui promovido a pleno e depois a sênior — sempre orientando e
+      contribuindo para o sucesso da equipe.
+    </p>
+    <p>
+      Hoje me dedico a aprimorar C#, .NET, Angular e todo o ecossistema full stack, com atenção a
+      performance, arquitetura e experiência do usuário.
+    </p>
+  </div>
+
+  <div class="about__cards">
+    <div class="card">
+      <h3 class="card__title">Formação</h3>
+      <ul class="edu">
+        @for (item of education; track item.school) {
+          <li>
+            <strong>{{ item.school }}</strong>
+            <span>{{ item.course }}</span>
+            <small>{{ item.period }}</small>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <dl class="card stats">
+      @for (stat of stats; track stat.label) {
+        <div>
+          <dt>{{ stat.label }}</dt>
+          <dd>{{ stat.value }}</dd>
+        </div>
+      }
+    </dl>
+  </div>
+</div>

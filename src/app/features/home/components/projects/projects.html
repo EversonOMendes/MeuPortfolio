@@ -1,0 +1,58 @@
+<div class="container">
+  <app-section-header eyebrow="Projetos">
+    <h2>Projetos em <span class="hl">destaque.</span></h2>
+  </app-section-header>
+
+  <div class="company">
+    <app-logo-tile [src]="company.logo" [alt]="'Logo da ' + company.name" [size]="88" />
+    <div class="company__text">
+      <span class="company__kicker">{{ company.tagline }}</span>
+      <h3>
+        {{ company.name }} <small class="company__full">{{ company.fullName }}</small>
+      </h3>
+      <p>{{ company.description }}</p>
+    </div>
+    <a appButton variant="outline" size="sm" [href]="company.url" target="_blank" rel="noopener">
+      Conhecer a empresa <app-icon name="external" [size]="16" />
+    </a>
+  </div>
+
+  <ul class="projects">
+    @for (project of projects; track project.id) {
+      <li>
+        <app-project-card [project]="project" (details)="openDetails($event)" />
+      </li>
+    }
+  </ul>
+</div>
+
+<app-modal
+  [open]="modalOpen()"
+  (openChange)="onModalOpenChange($event)"
+  [title]="selected()?.name ?? ''"
+  [subtitle]="selected()?.tagline"
+>
+  <!-- Um @if por slot: blocos com raiz única são projetados no slot do seu seletor. -->
+  @if (selected(); as project) {
+    <app-logo-tile modalMedia [src]="project.logo" [size]="64" />
+  }
+
+  @if (selected(); as project) {
+    <div class="details">
+      <p>{{ project.description }}</p>
+
+      <h3 class="details__title">Principais recursos</h3>
+      <ul class="details__features">
+        @for (feature of project.features; track feature) {
+          <li><app-icon name="check" [size]="18" /> {{ feature }}</li>
+        }
+      </ul>
+    </div>
+  }
+
+  @if (selected(); as project) {
+    <a modalFooter appButton [href]="project.url" target="_blank" rel="noopener">
+      Conhecer o {{ project.name }} <app-icon name="external" [size]="18" />
+    </a>
+  }
+</app-modal>

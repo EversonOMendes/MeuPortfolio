@@ -1,0 +1,33 @@
+<dialog
+  #dialog
+  class="modal"
+  [attr.aria-labelledby]="titleId"
+  (cancel)="onCancel($event)"
+  (close)="close()"
+  (click)="onBackdropClick($event)"
+>
+  @if (open()) {
+    <div class="modal__panel">
+      <header class="modal__header">
+        <ng-content select="[modalMedia]" />
+        <div class="modal__heading">
+          <h2 class="modal__title" [id]="titleId">{{ title() }}</h2>
+          @if (subtitle(); as sub) {
+            <p class="modal__subtitle">{{ sub }}</p>
+          }
+        </div>
+        <button type="button" class="modal__close" (click)="close()" aria-label="Fechar">
+          <app-icon name="close" />
+        </button>
+      </header>
+
+      <div class="modal__body">
+        <ng-content />
+      </div>
+
+      <footer class="modal__footer">
+        <ng-content select="[modalFooter]" />
+      </footer>
+    </div>
+  }
+</dialog>

@@ -1,0 +1,148 @@
+:host {
+  display: block;
+}
+
+.strip {
+  padding: 40px 0 48px;
+  background:
+    radial-gradient(ellipse 40% 60% at 55% 100%, rgba(242, 140, 30, 0.1), transparent 70%),
+    var(--bg-2);
+  border-bottom: 1px solid var(--line);
+}
+
+.strip__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1px minmax(280px, 370px);
+  gap: 44px;
+}
+
+.strip__grid::before {
+  content: '';
+  grid-column: 2;
+  grid-row: 1;
+  background: var(--line-strong);
+}
+
+.strip__main {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  min-width: 0;
+}
+
+.strip__side {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ---------- Tecnologias ---------- */
+.strip__techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px 10px;
+  margin-top: 22px;
+}
+
+/* ---------- Projetos ---------- */
+.strip__featured {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+}
+
+.strip__featured li + li {
+  border-left: 1px solid var(--line);
+}
+
+.featured {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 100%;
+  padding: 18px 20px;
+  transition: background-color 0.2s ease;
+}
+.featured:hover {
+  background: rgba(242, 140, 30, 0.06);
+}
+
+.featured__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.featured__text strong {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+}
+.featured__text small {
+  color: var(--text-2);
+  font-size: 13.5px;
+  line-height: 1.35;
+}
+
+/* ---------- Sobre / CTA ---------- */
+.strip__about {
+  color: var(--text-2);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.strip__cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--text-2);
+  font-size: 17px;
+  transition: color 0.2s ease;
+}
+.strip__cta:hover {
+  color: var(--text);
+}
+.strip__cta app-icon {
+  color: var(--accent);
+}
+
+.strip__rule {
+  flex: 1;
+  height: 2px;
+  min-width: 30px;
+  background: linear-gradient(90deg, transparent, var(--accent));
+}
+
+@media (max-width: 1100px) {
+  .strip__grid {
+    grid-template-columns: 1fr;
+  }
+  .strip__grid::before {
+    display: none;
+  }
+  .strip__main,
+  .strip__side {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .strip__featured {
+    grid-template-columns: 1fr;
+  }
+  .strip__featured li + li {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}

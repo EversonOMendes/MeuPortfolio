@@ -1,0 +1,49 @@
+<section class="strip" aria-label="Destaques">
+  <div class="container strip__grid">
+    <div class="strip__main">
+      <div>
+        <app-section-header eyebrow="Minhas Tecnologias" [accent]="false" [compact]="true" />
+        <ul class="strip__techs">
+          @for (tech of techs; track tech.name) {
+            <li><app-tech-badge [tech]="tech" /></li>
+          }
+        </ul>
+      </div>
+
+      <div>
+        <app-section-header eyebrow="Projetos em Destaque" [accent]="false" [compact]="true" />
+        <ul class="strip__featured">
+          @for (project of projects; track project.id) {
+            <li>
+              <a class="featured" appScrollTo="projetos">
+                <app-logo-tile [src]="project.logo" [size]="48" />
+                <span class="featured__text">
+                  <strong>{{ project.name }}</strong>
+                  <small>{{ project.tagline }}</small>
+                </span>
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <aside class="strip__side">
+      <app-section-header eyebrow="Sobre Mim" [accent]="false" [compact]="true" />
+      <p class="strip__about">
+        Sou Everson, desenvolvedor full stack com experiência desde 2018. Ao longo da minha
+        trajetória, atuo no desenvolvimento de sistemas, automações e soluções inteligentes, sempre
+        buscando evolução e novos desafios.
+      </p>
+      <a class="link-accent" appScrollTo="sobre">
+        Saiba mais <app-icon name="arrow-right" [size]="16" />
+      </a>
+
+      <a class="strip__cta" appScrollTo="contato">
+        <span class="strip__rule" aria-hidden="true"></span>
+        <em>Vamos construir algo incrível juntos?</em>
+        <app-icon name="send" [size]="28" />
+      </a>
+    </aside>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<div class="container contact">
+  <app-section-header eyebrow="Contato">
+    <h2>Vamos construir algo <span class="hl">incrível juntos?</span></h2>
+  </app-section-header>
+
+  <p class="contact__lead">
+    Tem um projeto, uma vaga ou uma ideia? Me chame — vou adorar conversar.
+  </p>
+
+  <div class="contact__actions">
+    <a appButton [href]="links.whatsapp" target="_blank" rel="noopener">
+      <app-icon name="whatsapp" /> Chamar no WhatsApp
+    </a>
+    <a appButton variant="outline" [href]="links.email">
+      <app-icon name="mail" [size]="18" /> E-mail
+    </a>
+    <a appButton variant="outline" [href]="links.linkedin" target="_blank" rel="noopener">
+      <app-icon name="linkedin" [size]="18" /> LinkedIn
+    </a>
+    <a appButton variant="outline" [href]="links.github" target="_blank" rel="noopener">
+      <app-icon name="github" [size]="18" /> GitHub
+    </a>
+  </div>
+
+  <p class="contact__phone">
+    ou ligue/mande mensagem:
+    <a [href]="links.whatsapp" target="_blank" rel="noopener">{{ links.phone }}</a>
+  </p>
+</div>
