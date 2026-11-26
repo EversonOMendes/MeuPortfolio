@@ -26,33 +26,4 @@
   </ul>
 </div>
 
-<app-modal
-  [open]="modalOpen()"
-  (openChange)="onModalOpenChange($event)"
-  [title]="selected()?.name ?? ''"
-  [subtitle]="selected()?.tagline"
->
-  <!-- Um @if por slot: blocos com raiz única são projetados no slot do seu seletor. -->
-  @if (selected(); as project) {
-    <app-logo-tile modalMedia [src]="project.logo" [size]="64" />
-  }
-
-  @if (selected(); as project) {
-    <div class="details">
-      <p>{{ project.description }}</p>
-
-      <h3 class="details__title">Principais recursos</h3>
-      <ul class="details__features">
-        @for (feature of project.features; track feature) {
-          <li><app-icon name="check" [size]="18" /> {{ feature }}</li>
-        }
-      </ul>
-    </div>
-  }
-
-  @if (selected(); as project) {
-    <a modalFooter appButton [href]="project.url" target="_blank" rel="noopener">
-      Conhecer o {{ project.name }} <app-icon name="external" [size]="18" />
-    </a>
-  }
-</app-modal>
+<app-project-details-modal [(project)]="selected" />

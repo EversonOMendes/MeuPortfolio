@@ -7,7 +7,7 @@ import {
   model,
   viewChild,
 } from '@angular/core';
-import { Icon } from '../icon/icon';
+import { Icon } from '../../ui/icon/icon';
 
 let nextId = 0;
 

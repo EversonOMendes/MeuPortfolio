@@ -1,0 +1,30 @@
+<app-modal
+  [open]="open()"
+  (openChange)="onOpenChange($event)"
+  [title]="project()?.name ?? ''"
+  [subtitle]="project()?.tagline"
+>
+  <!-- Um @if por slot: blocos com raiz única são projetados no slot do seu seletor. -->
+  @if (project(); as p) {
+    <app-logo-tile modalMedia [src]="p.logo" [size]="64" />
+  }
+
+  @if (project(); as p) {
+    <div class="details">
+      <p>{{ p.description }}</p>
+
+      <h3 class="details__title">Principais recursos</h3>
+      <ul class="details__features">
+        @for (feature of p.features; track feature) {
+          <li><app-icon name="check" [size]="18" /> {{ feature }}</li>
+        }
+      </ul>
+    </div>
+  }
+
+  @if (project(); as p) {
+    <a modalFooter appButton [href]="p.url" target="_blank" rel="noopener">
+      Conhecer o {{ p.name }} <app-icon name="external" [size]="18" />
+    </a>
+  }
+</app-modal>
