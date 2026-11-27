@@ -42,6 +42,28 @@
       </ul>
     </div>
 
+    <div class="card">
+      <h3 class="card__title">Certificações</h3>
+      <ul class="edu">
+        @for (cert of certifications; track cert.name) {
+          <li [class.is-pending]="cert.inProgress">
+            @if (cert.url) {
+              <a class="cert__link" [href]="cert.url" target="_blank" rel="noopener">
+                <strong>{{ cert.name }}</strong>
+                <app-icon name="external" [size]="15" />
+              </a>
+            } @else {
+              <strong>{{ cert.name }}</strong>
+            }
+            @if (cert.issuer) {
+              <span>{{ cert.issuer }}</span>
+            }
+            <small>{{ cert.inProgress ? 'Em preparação' : cert.date }}</small>
+          </li>
+        }
+      </ul>
+    </div>
+
     <dl class="card stats">
       @for (stat of stats; track stat.label) {
         <div>

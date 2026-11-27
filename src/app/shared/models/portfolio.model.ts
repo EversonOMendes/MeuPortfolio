@@ -58,6 +58,14 @@ export interface Experience {
   readonly roles: readonly ExperienceRole[];
 }
 
+export interface Certification {
+  readonly name: string;
+  readonly issuer?: string;
+  readonly date?: string;
+  readonly url?: string;
+  readonly inProgress?: boolean;
+}
+
 export interface Education {
   readonly school: string;
   readonly course: string;

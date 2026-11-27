@@ -60,6 +60,23 @@
   color: var(--text-3);
 }
 
+.edu li.is-pending {
+  border-left-style: dashed;
+}
+
+.cert__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+.cert__link app-icon {
+  color: var(--accent);
+}
+.cert__link:hover {
+  color: var(--accent);
+}
+
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -1,4 +1,5 @@
 import {
+  Certification,
   Company,
   Education,
   Experience,
@@ -193,4 +194,14 @@ export const EDUCATION: readonly Education[] = [
     period: '2023 - 2025',
   },
   { school: 'Senac - RS', course: 'Técnico em Informática', period: '2014 - 2016' },
+];
+
+export const CERTIFICATIONS: readonly Certification[] = [
+  {
+    name: 'Foundational C# with Microsoft',
+    issuer: 'freeCodeCamp e Microsoft',
+    date: 'Set 2026',
+    url: 'https://www.freecodecamp.org/certification/fcc956638ed-74a0-422d-b89d-98482bd9ad2a/foundational-c-sharp-with-microsoft',
+  },
+  { name: 'Junior Angular Developer', issuer: 'Certificates.dev', inProgress: true },
 ];

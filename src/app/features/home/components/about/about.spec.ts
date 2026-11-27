@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RESUME } from '../../../../core/data/portfolio.data';
+import { CERTIFICATIONS, RESUME } from '../../../../core/data/portfolio.data';
 import { About } from './about';
 
 describe('About', () => {
@@ -27,5 +27,14 @@ describe('About', () => {
     ).map((a) => a.getAttribute('href'));
 
     expect(links).toEqual([RESUME.pdf]);
+  });
+
+  it('lista as certificações com link para a credencial', () => {
+    const el = fixture.nativeElement as HTMLElement;
+    const link = el.querySelector<HTMLAnchorElement>('.cert__link');
+
+    expect(link?.textContent).toContain('Foundational C# with Microsoft');
+    expect(link?.href).toBe(CERTIFICATIONS[0].url);
+    expect(el.querySelector('.is-pending')?.textContent).toContain('Em preparação');
   });
 });
