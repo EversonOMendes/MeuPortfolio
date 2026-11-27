@@ -131,6 +131,7 @@ export const EXPERIENCES: readonly Experience[] = [
   },
   {
     company: 'InterOp',
+    url: 'https://interop.com.br/',
     location: 'Porto Alegre, RS',
     workMode: 'Híbrido',
     roles: [
