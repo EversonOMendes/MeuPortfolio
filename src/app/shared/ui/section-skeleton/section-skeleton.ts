@@ -3,10 +3,6 @@ import { Skeleton } from '../skeleton/skeleton';
 
 export type SectionSkeletonVariant = 'split' | 'cards' | 'timeline' | 'cta';
 
-/**
- * Placeholder de seção inteira, com layout próximo do conteúdo real para evitar
- * saltos de layout (CLS) enquanto blocos `@defer` carregam.
- */
 @Component({
   selector: 'app-section-skeleton',
   imports: [Skeleton],

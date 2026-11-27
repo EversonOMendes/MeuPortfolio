@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
 import { Skeleton } from '../skeleton/skeleton';
 
-/** Logo quadrado com fundo sutil e skeleton enquanto a imagem carrega. */
 @Component({
   selector: 'app-logo-tile',
   imports: [Skeleton],

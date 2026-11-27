@@ -1,10 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Directive, inject, input } from '@angular/core';
 
-/**
- * Âncora com rolagem suave até um elemento da página, mantendo `href="#id"`
- * (funciona sem JS, em "abrir em nova aba" e respeita `prefers-reduced-motion`).
- */
 @Directive({
   selector: 'a[appScrollTo]',
   host: {

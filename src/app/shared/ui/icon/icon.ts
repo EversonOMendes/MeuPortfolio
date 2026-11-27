@@ -12,9 +12,9 @@ export type IconName =
   | 'external'
   | 'check'
   | 'menu'
-  | 'whatsapp';
+  | 'whatsapp'
+  | 'download';
 
-/** Ícones SVG inline (sem dependência externa), herdam `currentColor`. */
 @Component({
   selector: 'app-icon',
   templateUrl: './icon.html',

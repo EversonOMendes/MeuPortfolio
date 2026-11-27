@@ -3,8 +3,8 @@ import { formatDuration, formatMonth, formatPeriod, monthsBetween } from './mont
 describe('month-range', () => {
   it('formata mês e período', () => {
     expect(formatMonth('2023-12')).toBe('Dez 2023');
-    expect(formatPeriod('2023-01', '2023-12')).toBe('Jan 2023 — Dez 2023');
-    expect(formatPeriod('2025-06')).toBe('Jun 2025 — Atual');
+    expect(formatPeriod('2023-01', '2023-12')).toBe('Jan 2023 - Dez 2023');
+    expect(formatPeriod('2025-06')).toBe('Jun 2025 - Atual');
   });
 
   it('conta meses incluindo início e fim', () => {

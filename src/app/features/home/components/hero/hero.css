@@ -17,7 +17,6 @@
     var(--bg);
 }
 
-/* ---------- Visual (foto + faixas) ---------- */
 .hero__visual {
   position: absolute;
   inset: 0 0 0 auto;
@@ -75,7 +74,6 @@
   filter: blur(1px);
 }
 
-/* ---------- Conteúdo ---------- */
 .hero__content {
   position: relative;
 }

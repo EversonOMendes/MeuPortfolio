@@ -18,6 +18,13 @@
 .about__text p + p {
   margin-top: 18px;
 }
+.about__resume {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
 .about__text strong {
   color: var(--text);
 }

@@ -5,7 +5,6 @@
   border-block: 1px solid var(--line);
 }
 
-/* ---------- Empresa ---------- */
 .company {
   display: flex;
   align-items: center;
@@ -51,7 +50,6 @@
   line-height: 1.6;
 }
 
-/* ---------- Grid ---------- */
 .projects {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -4,7 +4,6 @@
   [title]="project()?.name ?? ''"
   [subtitle]="project()?.tagline"
 >
-  <!-- Um @if por slot: blocos com raiz única são projetados no slot do seu seletor. -->
   @if (project(); as p) {
     <app-logo-tile modalMedia [src]="p.logo" [size]="64" />
   }

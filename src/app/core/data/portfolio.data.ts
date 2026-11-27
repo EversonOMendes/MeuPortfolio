@@ -4,11 +4,10 @@ import {
   Experience,
   NavItem,
   Project,
+  Resume,
   SocialLinks,
   Tech,
 } from '../../shared/models/portfolio.model';
-
-/** Conteúdo do portfólio. Fonte única de verdade, pronta para virar uma API no futuro. */
 
 export const NAV_ITEMS: readonly NavItem[] = [
   { id: 'inicio', label: 'Início' },
@@ -26,6 +25,10 @@ export const SOCIAL_LINKS: SocialLinks = {
     'https://wa.me/5543984458966?text=' +
     encodeURIComponent('Olá, Everson! Vi seu portfólio e gostaria de conversar.'),
   phone: '+55 (43) 9 8445-8966',
+};
+
+export const RESUME: Resume = {
+  pdf: 'assets/curriculo/everson-mendes-curriculo.pdf',
 };
 
 export const TECHS: readonly Tech[] = [
@@ -46,7 +49,7 @@ export const COMPANY: Company = {
   fullName: 'Mendes Sul Sistemas',
   tagline: 'Minha empresa',
   description:
-    'Soluções inteligentes para atendimento via WhatsApp e gestão empresarial: multiatendimento e automação no WhatsApp, gestão, PDV, loja online e emissão de notas fiscais — tudo em um só lugar.',
+    'Soluções inteligentes para atendimento via WhatsApp e gestão empresarial: multiatendimento e automação no WhatsApp, gestão, PDV, loja online e emissão de notas fiscais, tudo em um só lugar.',
   url: 'https://www.msulsistemas.com.br/',
   logo: 'assets/projects/msul.webp',
 };
@@ -101,14 +104,14 @@ export const EXPERIENCES: readonly Experience[] = [
         title: 'Fundador · Full Stack Developer',
         start: '2025-06',
         summary:
-          'Concepção, desenvolvimento e operação de uma plataforma SaaS com três produtos — SmartChat, SmartERP e SmartShop — do produto à infraestrutura.',
+          'Concepção, desenvolvimento e operação de uma plataforma SaaS com três produtos (SmartChat, SmartERP e SmartShop), do produto à infraestrutura.',
         highlights: [
           'API em ASP.NET Core 9 com Clean Architecture (Domain, Application, Infrastructure e Api) e EF Core 9 sobre MySQL.',
           'Arquitetura multi-tenant com estratégias por produto (SmartChat e SmartShop).',
           'Atendimento via API Oficial do WhatsApp (Meta) com automações e respostas assistidas por IA (Claude, da Anthropic).',
           'Pagamentos via Pix com notificação em tempo real (SignalR) e jobs agendados para cobranças, renovação de planos e backups.',
           'Segurança com autenticação JWT assinada por chaves RSA, verificação em duas etapas (2FA) e rate limiting.',
-          'Testes automatizados com xUnit e Moq, CI no GitHub Actions e deploy em servidor Linux — mais de 760 commits desde o início.',
+          'Testes automatizados com xUnit e Moq, CI no GitHub Actions e deploy em servidor Linux, com mais de 760 commits desde o início.',
         ],
         stack: [
           'C#',
@@ -187,7 +190,7 @@ export const EDUCATION: readonly Education[] = [
   {
     school: 'Universidade Estácio',
     course: 'Análise e Desenvolvimento de Sistemas',
-    period: '2023 — 2025',
+    period: '2023 - 2025',
   },
-  { school: 'Senac - RS', course: 'Técnico em Informática', period: '2014 — 2016' },
+  { school: 'Senac - RS', course: 'Técnico em Informática', period: '2014 - 2016' },
 ];

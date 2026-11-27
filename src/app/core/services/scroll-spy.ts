@@ -1,7 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { DestroyRef, Injectable, inject, signal } from '@angular/core';
 
-/** Observa as seções da página e expõe qual está ativa (para destacar o menu). */
 @Injectable({ providedIn: 'root' })
 export class ScrollSpy {
   private readonly document = inject(DOCUMENT);
@@ -24,7 +23,6 @@ export class ScrollSpy {
           if (entry.isIntersecting) this._active.set(entry.target.id);
         }
       },
-      // Considera ativa a seção que cruza a faixa central da viewport.
       { rootMargin: '-45% 0px -50% 0px' },
     );
 

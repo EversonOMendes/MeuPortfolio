@@ -17,12 +17,10 @@ import { SectionHeader } from '../../../../shared/ui/section-header/section-head
 export class Experience {
   protected readonly experiences = EXPERIENCES;
 
-  /** Início do primeiro cargo na empresa (os cargos vêm do mais recente ao mais antigo). */
   protected firstStart(exp: ExperienceItem): string {
     return exp.roles[exp.roles.length - 1].start;
   }
 
-  /** Fim do cargo mais recente; `undefined` se ainda estiver na empresa. */
   protected lastEnd(exp: ExperienceItem): string | undefined {
     return exp.roles[0].end;
   }

@@ -1,16 +1,19 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { EDUCATION } from '../../../../core/data/portfolio.data';
+import { EDUCATION, RESUME } from '../../../../core/data/portfolio.data';
+import { Button } from '../../../../shared/ui/button/button';
+import { Icon } from '../../../../shared/ui/icon/icon';
 import { SectionHeader } from '../../../../shared/ui/section-header/section-header';
 
 @Component({
   selector: 'app-about',
-  imports: [SectionHeader],
+  imports: [Button, Icon, SectionHeader],
   templateUrl: './about.html',
   styleUrl: './about.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class About {
   protected readonly education = EDUCATION;
+  protected readonly resume = RESUME;
   protected readonly stats = [
     { value: '2018', label: 'programando desde' },
     { value: '10+', label: 'tecnologias no dia a dia' },

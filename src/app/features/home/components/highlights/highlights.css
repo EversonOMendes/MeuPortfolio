@@ -40,7 +40,6 @@
   gap: 18px;
 }
 
-/* ---------- Tecnologias ---------- */
 .strip__techs {
   display: flex;
   flex-wrap: wrap;
@@ -48,7 +47,6 @@
   margin-top: 22px;
 }
 
-/* ---------- Projetos ---------- */
 .strip__featured {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -92,7 +90,6 @@
   line-height: 1.35;
 }
 
-/* ---------- Sobre / CTA ---------- */
 .strip__about {
   color: var(--text-2);
   font-size: 17px;

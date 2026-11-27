@@ -16,7 +16,6 @@
     }
   </ul>
 
-  <!-- Botão "esticado": o card inteiro é clicável, mantendo um único alvo acessível. -->
   <button type="button" class="pcard__more" (click)="details.emit(p)">
     Ver detalhes <span class="sr-only">do {{ p.name }}</span>
     <app-icon name="arrow-right" [size]="16" />

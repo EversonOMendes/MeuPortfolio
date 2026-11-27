@@ -19,7 +19,6 @@ export class Projects {
   protected readonly company = COMPANY;
   protected readonly projects = PROJECTS;
 
-  /** Projeto exibido no modal de detalhes; `null` = modal fechado. */
   protected readonly selected = signal<Project | null>(null);
 
   protected openDetails(project: Project): void {

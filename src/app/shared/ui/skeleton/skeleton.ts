@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 export type SkeletonShape = 'rect' | 'text' | 'circle';
 
-/** Bloco de carregamento com shimmer. Puramente visual (`aria-hidden`). */
 @Component({
   selector: 'app-skeleton',
   templateUrl: './skeleton.html',

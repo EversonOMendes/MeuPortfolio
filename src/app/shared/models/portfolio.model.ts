@@ -3,18 +3,20 @@ export interface NavItem {
   readonly label: string;
 }
 
+export interface Resume {
+  readonly pdf: string;
+}
+
 export interface SocialLinks {
   readonly linkedin: string;
   readonly github: string;
   readonly email: string;
   readonly whatsapp: string;
-  /** Número formatado para exibição. */
   readonly phone: string;
 }
 
 export interface Tech {
   readonly name: string;
-  /** Classe do Devicon (https://devicon.dev). */
   readonly icon: string;
 }
 
@@ -29,9 +31,7 @@ export interface Project {
 }
 
 export interface Company {
-  /** Nome da marca. */
   readonly name: string;
-  /** Nome completo da empresa. */
   readonly fullName: string;
   readonly tagline: string;
   readonly description: string;
@@ -41,9 +41,7 @@ export interface Company {
 
 export interface ExperienceRole {
   readonly title: string;
-  /** Início no formato `YYYY-MM`. */
   readonly start: string;
-  /** Fim no formato `YYYY-MM`; ausente = cargo atual. */
   readonly end?: string;
   readonly summary: string;
   readonly highlights: readonly string[];
@@ -57,7 +55,6 @@ export interface Experience {
   readonly location?: string;
   readonly workMode?: string;
   readonly url?: string;
-  /** Cargos do mais recente para o mais antigo. */
   readonly roles: readonly ExperienceRole[];
 }
 

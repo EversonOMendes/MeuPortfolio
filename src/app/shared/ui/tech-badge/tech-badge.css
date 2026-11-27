@@ -22,7 +22,6 @@ i {
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.5));
 }
 
-/* Ícones monocromáticos ficam legíveis no fundo escuro */
 i.devicon-linux-plain {
   color: #f4f4f5;
 }

@@ -9,10 +9,6 @@ import { Hero } from './components/hero/hero';
 import { Highlights } from './components/highlights/highlights';
 import { Projects } from './components/projects/projects';
 
-/**
- * Página única do portfólio. A dobra inicial (Hero + Destaques) é renderizada de imediato;
- * as demais seções são carregadas sob demanda com `@defer`, exibindo skeletons no lugar.
- */
 @Component({
   selector: 'app-home',
   imports: [Hero, Highlights, About, Projects, Experience, Contact, SectionSkeleton],

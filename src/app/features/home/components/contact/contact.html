@@ -4,7 +4,7 @@
   </app-section-header>
 
   <p class="contact__lead">
-    Tem um projeto, uma vaga ou uma ideia? Me chame — vou adorar conversar.
+    Tem um projeto, uma vaga ou uma ideia? Me chame, vou adorar conversar.
   </p>
 
   <div class="contact__actions">
@@ -19,6 +19,12 @@
     </a>
     <a appButton variant="outline" [href]="links.github" target="_blank" rel="noopener">
       <app-icon name="github" [size]="18" /> GitHub
+    </a>
+  </div>
+
+  <div class="contact__resume">
+    <a appButton variant="ghost" size="sm" [href]="resume.pdf" download>
+      <app-icon name="download" [size]="16" /> Baixar currículo (PDF)
     </a>
   </div>
 

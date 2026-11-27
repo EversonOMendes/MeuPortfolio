@@ -11,12 +11,6 @@ import { Icon } from '../../ui/icon/icon';
 
 let nextId = 0;
 
-/**
- * Modal acessível baseado no `<dialog>` nativo (focus trap, Esc e top-layer gratuitos).
- *
- * Slots: `[modalMedia]` (ao lado do título), conteúdo padrão (corpo) e `[modalFooter]`.
- * Uso: `<app-modal [(open)]="aberto" title="Título">...</app-modal>`
- */
 @Component({
   selector: 'app-modal',
   imports: [Icon],

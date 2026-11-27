@@ -3,10 +3,6 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 export type ButtonVariant = 'primary' | 'outline' | 'ghost';
 export type ButtonSize = 'md' | 'sm';
 
-/**
- * Botão base do design system. Aplicado como atributo para manter a semântica nativa:
- * `<a appButton>` para navegação e `<button appButton>` para ações.
- */
 @Component({
   selector: 'a[appButton], button[appButton]',
   templateUrl: './button.html',

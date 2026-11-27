@@ -1,11 +1,6 @@
-<!-- Acima da dobra: renderização imediata -->
 <app-hero id="inicio" />
 <app-highlights />
 
-<!--
-  Abaixo da dobra: chunks separados. Carregam quando entram na viewport
-  ou assim que o navegador fica ocioso — o que vier primeiro.
--->
 <section id="sobre" class="anchor" aria-label="Sobre">
   @defer (on viewport; on idle) {
     <app-about />
